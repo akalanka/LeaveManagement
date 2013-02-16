@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <package name="default" namespace="/" extends="struts-default, json-default">
+
+        <action name="showEmployeePageAction"
+                class="employeeManagementAction" method="showEmployeePage">
+            <result name="success">pages/employee.jsp</result>
+        </action>
+
+        <action name="showLoginPageAction"
+                class="employeeManagementAction" method="showLoginPage">
+            <result name="success">pages/login.jsp</result>
+        </action>
+
+        <action name="addEmployeeAction"
+                class="employeeManagementAction" method="addEmployee">
+            <result name="success">pages/employee.jsp</result>
+        </action>
+
+        <action name="listEmployeeAction"
+                class="employeeManagementAction" method="listEmployees">
+            <result name="success">pages/employee.jsp</result>
+        </action>
+
+    </package>
+
+    <!--<include file="com/leavemanagement/employeemanagement/action/employee.struts.xml"/>-->
+</struts>
