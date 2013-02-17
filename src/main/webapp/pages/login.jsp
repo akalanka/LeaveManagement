@@ -7,18 +7,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+
+<link href="css/start/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+<script src="js/jquery-1.9.0.js"></script>
+<script src="js/jquery-ui-1.10.0.custom.js"></script>
+
+<script>
+	$(function() {
+		$("#submitButton").button();
+	});
+</script>
+
 </head>
 <body>
 	Login Page
 
 	<s:form>
-		<s:textfield name="username" label="User name" />
-		<s:password name="password" label="Password" />
-		<s:submit value="Login" />
+		<s:textfield name="username" label="User name" class="text ui-widget-content ui-corner-all" id="username" />
+		<s:password name="password" label="Password" class="text ui-widget-content ui-corner-all" id="password" />
+		<s:submit value="Login" id="submitButton" />
 	</s:form>
 
 </body>
