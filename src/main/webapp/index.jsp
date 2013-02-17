@@ -1,6 +1,8 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<jsp:forward page="showLoginPageAction.action"/>
+<%
+    response.sendRedirect("/LeaveManagement/showLoginPageAction");
+%>
 </body>
 </html>
